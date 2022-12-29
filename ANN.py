@@ -7,7 +7,7 @@ class Layer:
     weights = None  
     bias = None #for each nueron in the layer
 
-    z = None
+    z = None    
     activations = None
 
     dW = 0 #dE/dW
