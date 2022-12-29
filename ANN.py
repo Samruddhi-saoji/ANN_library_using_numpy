@@ -18,7 +18,7 @@ class Layer:
         self.neurons = neurons #number of neurons in the layer
         self.g = activation_func #activation function for this layer
             #calling the activation function: self.g(x)
-            #sigmoid, ReLU, or softmax
+            #sigmoid, ReLU, tanh or softmax 
         
         #assign the activation function derivative
         if self.g == sigmoid :
@@ -46,6 +46,12 @@ def ReLU_derivative(x):
 def softmax(x) :
     exp = np.exp(x - np.max(x))
     return exp / exp.sum(axis=0)
+
+def tanh(x) :
+    return np.tanh(x)
+
+def tanh_derivative(x) :
+    return (1 - np.power(np.tanh(x), 2))
 
 
 
